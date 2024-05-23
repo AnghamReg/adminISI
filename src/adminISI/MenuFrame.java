@@ -46,7 +46,7 @@ public class MenuFrame extends JFrame {
 			}
 		});
 	}
-	
+
 	/**
 	 * Create the frame.
 	 */
@@ -62,13 +62,13 @@ public class MenuFrame extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JButton btnFormulaire = new JButton("Formulaires");
 		btnFormulaire.setToolTipText("consulter les formulaires");
 		btnFormulaire.setBackground(Color.WHITE);
 		btnFormulaire.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				FormulaireFrame formulaireFrame=new FormulaireFrame();
+				FormulaireFrame formulaireFrame = new FormulaireFrame();
 				formulaireFrame.setVisible(true);
 				setVisible(false);
 			}
@@ -76,12 +76,12 @@ public class MenuFrame extends JFrame {
 		btnFormulaire.setFont(new Font("Tahoma", Font.PLAIN, 10));
 		btnFormulaire.setBounds(197, 276, 207, 45);
 		contentPane.add(btnFormulaire);
-		
+
 		JLabel welcomeLabel = new JLabel("Bienvenue à l'application de gestion d'emplois");
 		welcomeLabel.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 19));
 		welcomeLabel.setBounds(100, 126, 448, 57);
 		contentPane.add(welcomeLabel);
-		
+
 		ImageIcon originalIcon = new ImageIcon(this.getClass().getResource("/isi_logo.png"));
 		Image originalImage = originalIcon.getImage();
 		Image resizedImage = originalImage.getScaledInstance(200, 100, Image.SCALE_SMOOTH); // Adjust width and height
@@ -89,25 +89,25 @@ public class MenuFrame extends JFrame {
 		JLabel photoLabel = new JLabel(resizedIcon);
 		photoLabel.setBounds(197, 10, 207, 106);
 		contentPane.add(photoLabel);
-		
+
 		JSeparator separatorUnderLogo = new JSeparator();
 		separatorUnderLogo.setForeground(new Color(0, 0, 64));
 		separatorUnderLogo.setBounds(75, 116, 448, 11);
 		contentPane.add(separatorUnderLogo);
-		
+
 		JPanel panelConsulter = new JPanel();
 		panelConsulter.setBorder(new SoftBevelBorder(BevelBorder.RAISED, null, null, null, null));
 		panelConsulter.setBackground(new Color(3, 129, 3));
 		panelConsulter.setBounds(135, 198, 328, 164);
 		contentPane.add(panelConsulter);
 		panelConsulter.setLayout(null);
-		
+
 		JLabel selectInterfaceLabel = new JLabel("Vous pouvez consulter ");
-		selectInterfaceLabel.setBounds(97, 43, 139, 23);
+		selectInterfaceLabel.setBounds(93, 43, 150, 23);
 		panelConsulter.add(selectInterfaceLabel);
 		selectInterfaceLabel.setForeground(Color.WHITE);
 		selectInterfaceLabel.setFont(new Font("Tahoma", Font.BOLD, 12));
-		
+
 		JButton deconnecterBtn = new JButton("Se déconnecter");
 		deconnecterBtn.setBackground(new Color(3, 129, 3));
 		deconnecterBtn.setForeground(new Color(255, 255, 255));
@@ -115,12 +115,12 @@ public class MenuFrame extends JFrame {
 		deconnecterBtn.setBounds(521, 10, 85, 21);
 		deconnecterBtn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				LoginFrame login=new LoginFrame();
+				LoginFrame login = new LoginFrame();
 				login.setVisible(true);
 				setVisible(false);
-				JOptionPane.showMessageDialog(null,"Vous êtes déconnecté.",null,JOptionPane.INFORMATION_MESSAGE);	
-		}
-	});
+				JOptionPane.showMessageDialog(null, "Vous êtes déconnecté.", null, JOptionPane.INFORMATION_MESSAGE);
+			}
+		});
 		contentPane.add(deconnecterBtn);
 	}
 }
